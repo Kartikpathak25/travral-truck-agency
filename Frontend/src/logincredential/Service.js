@@ -6,11 +6,16 @@ import './Service.css';
 function Service() {
   const navigate = useNavigate();
 
+
+  <p class="text-[#131416] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
+          Our truck agency system is designed to optimize the management of oil tanker trucks, ensuring efficient operations and maximizing profitability. With a user-friendly
+          interface and robust features, we empower agencies to handle their fleets with ease and precision.
+        </p>
   const operations = [
     {
       title: 'Fleet Management',
       description: 'Manage trucks and tankers with real-time tracking.',
-      path: '/fleet-management',
+      path: '/fleet',
       icon: 'fa-solid fa-truck-moving',
     },
     {

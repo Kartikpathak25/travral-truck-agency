@@ -58,3 +58,58 @@
 
   }
 }
+/* Admin.css */
+
+.admin-panel {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-panel h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.service-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.service-section h2 {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.service-section p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 20px;
+  }
+
+  .admin-panel h1 {
+    font-size: 26px;
+  }
+
+  .service-section h2 {
+    font-size: 20px;
+  }
+}
+

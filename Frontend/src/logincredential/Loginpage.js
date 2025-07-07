@@ -3,6 +3,7 @@ import '../App.css';
 import Signuppage from './signuppage'; 
 import { useForm } from "react-hook-form";
 import { AnimatePresence, motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 export default function Loginpage() {
   const {
@@ -12,10 +13,25 @@ export default function Loginpage() {
   } = useForm();
 
   const [isLogin, setIsLogin] = useState(true);
+  const navigate = useNavigate();
 
   const onSubmit = (data) => {
     console.log("Form Data:", data);
-    // You can add your login logic here
+
+    // Simulate login logic and redirect based on role
+    switch (data.role) {
+      case 'admin':
+        navigate('/admin');
+        break;
+      case 'tanker':
+        navigate('/tanker');
+        break;
+      case 'truck':
+        navigate('/truck');
+        break;
+      default:
+        alert('Invalid role selected');
+    }
   };
 
   return (
@@ -41,28 +57,40 @@ export default function Loginpage() {
             >
               <h2>Login Form</h2>
 
-           <input
-  type="email"
-  placeholder="Email ID"
-  className={errors.email ? 'error-input' : ''}
-  {...register("email", { required: "Email is required" })}
-/>
-{errors.email && <p className="error">{errors.email.message}</p>}
+              {/* Role Selection */}
+              <select
+                className={`form-select ${errors.role ? 'error-input' : ''}`}
+                {...register("role", { required: "Please select a role" })}
+              >
+                <option value="">Select Role</option>
+                <option value="admin">Admin</option>
+                <option value="tanker">Tanker</option>
+                <option value="truck">Truck</option>
+              </select>
+              {errors.role && <p className="error">{errors.role.message}</p>}
 
-<input
-  type="password"
-  placeholder="Password"
-  className={errors.password ? 'error-input' : ''}
-  {...register("password", { required: "Password is required" })}
-/>
-{errors.password && <p className="error">{errors.password.message}</p>}
+              {/* Email */}
+              <input
+                type="email"
+                placeholder="Email ID"
+                className={errors.email ? 'error-input' : ''}
+                {...register("email", { required: "Email is required" })}
+              />
+              {errors.email && <p className="error">{errors.email.message}</p>}
 
+              {/* Password */}
+              <input
+                type="password"
+                placeholder="Password"
+                className={errors.password ? 'error-input' : ''}
+                {...register("password", { required: "Password is required" })}
+              />
+              {errors.password && <p className="error">{errors.password.message}</p>}
 
               <a href="#">Forget password?</a>
-              
+
               <button type="submit">Login</button>
               <p>New user? <a href="#" onClick={() => setIsLogin(false)}>Signup</a></p>
-           
             </motion.form>
           ) : (
             <motion.div

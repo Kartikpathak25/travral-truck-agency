@@ -82,3 +82,18 @@ input.error-input {
   border: 1.5px solid #dd0a1c;
   background-color: #fff5f5;
 }
+.form-select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+  border-color: #007bff;
+  outline: none;
+}

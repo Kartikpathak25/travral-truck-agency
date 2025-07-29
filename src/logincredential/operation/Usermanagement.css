@@ -1,0 +1,166 @@
+/* UserManagementFormUnique.css - Unique Styling */
+
+.userform-container {
+  max-width: 520px;
+  margin: 48px auto;
+  background: linear-gradient(145deg, #f3f8ff, #d6e4ff);
+  padding: 40px 36px;
+  border-radius: 24px;
+  box-shadow:
+    0 22px 45px rgba(50, 100, 255, 0.15),
+    inset 0 -6px 12px rgba(64, 123, 255, 0.2);
+  font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1b2a49;
+  transition: box-shadow 0.4s ease;
+}
+
+.userform-container:hover {
+  box-shadow:
+    0 28px 58px rgba(37, 99, 235, 0.25),
+    inset 0 -8px 16px rgba(32, 92, 255, 0.3);
+}
+
+.userform-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  margin-bottom: 36px;
+  color: #254eda;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+  user-select: none;
+  text-shadow: 1px 1px 0 rgba(37, 99, 235, 0.6);
+}
+
+.userform-form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.userform-row {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.userform-row label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  color: #2d3a66;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+.userform-row label span {
+  color: #ff4b6e; /* coral red */
+  margin-left: 8px;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 900;
+  user-select: none;
+}
+
+.userform-row input,
+.userform-row select {
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(90deg, #ffffff, #e8f0fe);
+  box-shadow:
+    6px 6px 14px #c1cdfd,
+    -6px -6px 14px #ffffff;
+  color: #162a75;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.35s ease, transform 0.25s ease, box-shadow 0.35s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.userform-row input::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.userform-row input:focus,
+.userform-row select:focus {
+  outline: none;
+  background: linear-gradient(90deg, #d2e2ff, #cbdbff);
+  box-shadow:
+    inset 4px 4px 7px #a1b0fb,
+    inset -4px -4px 7px #f0f5ff;
+  transform: scale(1.02);
+  color: #1a237e;
+}
+
+.userform-row select {
+  cursor: pointer;
+  padding-right: 40px;
+  background-image:
+    url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+/* Button Styles */
+
+.userform-submit {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #3a8dff, #1b67f5);
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 16px 0;
+  border-radius: 30px;
+  border: none;
+  box-shadow:
+    0 8px 22px rgba(27, 103, 245, 0.7),
+    inset 0 -3px 0 rgba(14, 52, 133, 0.8);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  width: 100%;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.userform-submit:hover,
+.userform-submit:focus {
+  background: linear-gradient(135deg, #2d6dee, #0f3d9b);
+  box-shadow:
+    0 10px 28px rgba(15, 50, 105, 0.9),
+    inset 0 -3px 0 rgba(10, 30, 90, 1);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .userform-container {
+    padding: 32px 28px;
+    max-width: 90vw;
+  }
+
+  .userform-title {
+    font-size: 2.1rem;
+    letter-spacing: 0.05em;
+  }
+
+  .userform-row input,
+  .userform-row select {
+    font-size: 1rem;
+    padding: 12px 14px;
+  }
+
+  .userform-submit {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+}

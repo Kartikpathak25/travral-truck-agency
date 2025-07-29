@@ -1,0 +1,158 @@
+/* PetrolFilled.css - Unique Modern Styling */
+
+.petrol-container {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 36px 32px;
+  background: linear-gradient(145deg, #f0f4f8, #d9e2ec);
+  border-radius: 24px;
+  box-shadow: 0 14px 32px rgba(0, 47, 77, 0.12);
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #102a43;
+}
+
+.petrol-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  letter-spacing: 0.05em;
+  background: linear-gradient(90deg, #2d9cdb, #0a74da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: default;
+  user-select: none;
+}
+
+.petrol-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 28px;
+}
+
+@media (max-width: 600px) {
+  .petrol-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.petrol-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.petrol-row label {
+  font-weight: 600;
+  font-size: 1.07rem;
+  margin-bottom: 6px;
+  color: #334e68;
+  position: relative;
+}
+
+.petrol-row label span {
+  color: #d64545;
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.petrol-row input,
+.petrol-row textarea {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 2px solid #cbd5e0;
+  background: #f8fafc;
+  color: #243b53;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: 0.28s all ease;
+  box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.06);
+}
+
+.petrol-row input:focus,
+.petrol-row textarea:focus {
+  outline: none;
+  border-color: #0a74da;
+  background: #ffffff;
+  box-shadow:
+    0 0 12px 3px rgba(13, 110, 253, 0.3),
+    inset 0 1px 5px rgb(13 110 253 / 0.15);
+}
+
+.petrol-row textarea {
+  resize: vertical;
+  min-height: 60px;
+  font-family: inherit;
+}
+
+.petrol-row input[type="file"] {
+  padding: 6px 10px;
+  font-size: 0.93rem;
+}
+
+.petrol-row input[type="file"]::file-selector-button {
+  background-color: #0a74da;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-right: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.petrol-row input[type="file"]::file-selector-button:hover {
+  background-color: #074a9f;
+}
+
+.petrol-submit {
+  grid-column: 1 / -1;
+  margin-top: 28px;
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  color: #f8fafc;
+  padding: 16px 0;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow:
+    0 5px 11px rgba(59, 130, 246, 0.55),
+    inset 0 -3px 0 rgba(22, 101, 209, 0.75);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.22s ease;
+  user-select: none;
+}
+
+.petrol-submit:hover {
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 7px 18px rgba(37, 99, 235, 0.7),
+    inset 0 -3px 0 rgba(15, 79, 195, 0.9);
+}
+
+.petrol-back {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  background-color: #64748b;
+  color: #f1f5f9;
+  padding: 14px 0;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.petrol-back:hover {
+  background-color: #475569;
+}
+
+/* Placeholder color */
+.petrol-row input::placeholder,
+.petrol-row textarea::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+}

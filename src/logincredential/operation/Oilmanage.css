@@ -1,0 +1,152 @@
+/* OilmanageNew.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  background: #f7fafc;
+  color: #222b45;
+}
+
+.container {
+  min-height: 80vh;
+  max-width: 480px;
+  width: 90vw;
+  margin: 40px auto;
+  padding: 36px 24px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(30, 42, 80, 0.09);
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 22px;
+  letter-spacing: -0.04em;
+  color: #3066be;
+  text-shadow: 0 2px 10px rgba(48, 102, 190, 0.06);
+}
+
+.infoText {
+  font-size: 1.1rem;
+  color: #4e5d6c;
+  margin: 0 auto 42px auto;
+  line-height: 1.6;
+  max-width: 420px;
+  font-weight: 400;
+}
+
+.overviewPanel {
+  background-color: #e9f1fc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 3px 12px rgba(33, 150, 243, 0.15);
+  text-align: left;
+}
+
+.overviewTitle {
+  color: #1967d2;
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+}
+
+.overviewList {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.05rem;
+  color: #3a4a6d;
+  margin: 0;
+}
+
+.overviewList li {
+  margin-bottom: 8px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+.button {
+  flex: 1 1 170px;
+  max-width: 250px;
+  min-width: 140px;
+  padding: 16px 0;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 450;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+  box-shadow: 0 5px 14px rgba(44, 51, 73, 0.11);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.buttonPetrol {
+  background: linear-gradient(90deg, #5edb87 0%, #29986c 100%);
+}
+
+.buttonPetrol:hover,
+.buttonPetrol:focus {
+  background: linear-gradient(90deg, #38a169 0%, #0f5132 100%);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+  box-shadow: 0 8px 22px rgba(37, 122, 77, 0.5);
+}
+
+.buttonTruck {
+  background: linear-gradient(90deg, #679ded 0%, #3066be 100%);
+}
+
+.buttonTruck:hover,
+.buttonTruck:focus {
+  background: linear-gradient(90deg, #2550a9 0%, #193c69 100%);
+  transform: translateY(-2px) scale(1.04);
+  outline: none;
+  box-shadow: 0 8px 22px rgba(44, 83, 130, 0.5);
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 95vw;
+    padding: 28px 20px;
+    min-height: auto;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+  .infoText {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 20px;
+  }
+  .button {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

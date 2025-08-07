@@ -113,22 +113,14 @@ export default function Fleet() {
       ) : (
         <>
           <div style={styles.formContainer}>
-            <h2 style={styles.formTitle}>Add Truck/Tanker</h2>
+           <h2 style={styles.formTitle}>Add Truck/Tanker</h2> 
             <form>
               <div style={styles.formGroup}>
-                <label style={styles.label} htmlFor="vehicle-id">Vehicle ID</label>
-                <input style={styles.input} type="text" id="vehicle-id" placeholder="Enter Vehicle ID" />
+                <label style={styles.label} htmlFor="Truck Number">Truck Number</label>
+                <input style={styles.input} type="text" id="Truck Number" placeholder="Enter Truck Number" />
               </div>
 
-              <div style={styles.formGroup}>
-                <label style={styles.label} htmlFor="vehicle-type">Vehicle Type</label>
-                <select style={styles.input} id="vehicle-type">
-                  <option value="">Select Type</option>
-                  <option value="tanker">Tanker</option>
-                  <option value="truck">Truck</option>
-                </select>
-              </div>
-
+           
               <div style={styles.formGroup}>
                 <label style={styles.label} htmlFor="license-plate">License Plate</label>
                 <input style={styles.input} type="text" id="license-plate" placeholder="Enter License Plate" />
@@ -144,8 +136,8 @@ export default function Fleet() {
               </div>
 
               <div style={styles.formGroup}>
-                <label style={styles.label} htmlFor="capacity">Capacity (Liters)</label>
-                <input style={styles.input} type="text" id="capacity" placeholder="Enter Capacity" />
+                <label style={styles.label} htmlFor="capacity">USER NAME</label>
+                <input style={styles.input} type="text" id="capacity" placeholder="Enter Username" />
               </div>
 
               <div style={styles.formGroup}>

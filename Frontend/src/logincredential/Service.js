@@ -21,7 +21,7 @@ function Service() {
     {
       title: 'Oil Fill Management',
       description: 'Track oil deliveries and fill records.',
-      path: '/oil-fill-management',
+      path: '/oilmanagement',
       icon: 'fa-solid fa-gas-pump',
     },
     {
@@ -33,13 +33,13 @@ function Service() {
     {
       title: 'City Operations',
       description: 'Manage operations across multiple cities.',
-      path: '/city-operations',
+      path: '/cityoperation',
       icon: 'fa-solid fa-city',
     },
     {
       title: 'User Management',
       description: 'Control access for admins and operators.',
-      path: '/user-management',
+      path: '/usermanagement',
       icon: 'fa-solid fa-users-cog',
     },
   ];

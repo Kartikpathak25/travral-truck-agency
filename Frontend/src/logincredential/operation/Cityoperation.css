@@ -1,0 +1,233 @@
+/* Reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f5f7fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Flex center the main container vertically & horizontally */
+#root, body, html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align top easily scroll on mobile */
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.cityop-container {
+  background-color: #fff;
+  max-width: 850px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(50, 50, 93, 0.10), 0 6px 12px rgba(0, 0, 0, 0.07);
+  padding: 40px 48px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+/* Page title */
+.cityop-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: 0.06em;
+  margin-bottom: 36px;
+  user-select: none;
+  text-align: center;
+}
+
+/* Form */
+
+.cityop-form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  flex: 1 0 auto;
+}
+
+.cityop-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.cityop-row label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #334155;
+  user-select: none;
+  position: relative;
+}
+
+.cityop-row label span {
+  color: #ef4444; /* red color for required */
+  margin-left: 6px;
+  font-weight: 700;
+}
+
+.cityop-row input,
+.cityop-row select,
+.cityop-row textarea {
+  padding: 14px 18px;
+  font-size: 1.05rem;
+  border-radius: 14px;
+  border: 2px solid #cbd5e1;
+  background-color: #f9fafb;
+  color: #1e293b;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cityop-row input:focus,
+.cityop-row select:focus,
+.cityop-row textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 14px rgba(37, 99, 235, 0.6);
+  background-color: #fff;
+}
+
+.cityop-row select {
+  cursor: pointer;
+}
+
+.cityop-row textarea {
+  min-height: 84px;
+  max-height: 180px;
+}
+
+/* Buttons */
+
+.cityop-submit,
+.cityop-back {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 16px 0;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  box-shadow:
+    0 12px 26px rgba(37, 99, 235, 0.4),
+    inset 0 -4px 0 rgba(22, 72, 153, 0.55);
+  transition: background 0.35s ease, transform 0.21s ease;
+  width: 100%;
+}
+
+.cityop-submit {
+  background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%);
+  color: white;
+}
+
+.cityop-submit:hover,
+.cityop-submit:focus {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+  transform: translateY(-3px) scale(1.05);
+  outline: none;
+  box-shadow:
+    0 15px 32px rgba(29, 78, 216, 0.8),
+    inset 0 -5px 0 rgba(15, 45, 105, 0.9);
+}
+
+.cityop-back {
+  background-color: #64748b;
+  color: #f1f5f9;
+}
+
+.cityop-back:hover,
+.cityop-back:focus {
+  background-color: #475569;
+  outline: none;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Submitted records table & dashboard */
+
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 15px 40px rgba(50, 50, 93, 0.1), 0 6px 12px rgba(0, 0, 0, 0.07);
+  margin-top: 48px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.records-table thead {
+  background-color: #e0e7ff;
+  color: #1e293b;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.records-table th,
+.records-table td {
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.records-table tbody tr:nth-child(odd) {
+  background-color: #f9fafb;
+}
+
+.records-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .cityop-container {
+    padding: 32px 24px;
+    max-width: 95vw;
+  }
+
+  .cityop-title {
+    font-size: 2.2rem;
+  }
+
+  .cityop-row input,
+  .cityop-row select,
+  .cityop-row textarea {
+    font-size: 1rem;
+  }
+
+  .cityop-submit,
+  .cityop-back {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+  .records-table th,
+  .records-table td {
+    font-size: 0.95rem;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 450px) {
+  .cityop-title {
+    font-size: 1.8rem;
+  }
+}
